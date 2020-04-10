@@ -1,1 +1,15 @@
-/* Este es el main css */
+/* Main css */
+
+#divIndicadores{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-gap: 10px;
+    margin-bottom: 2rem;
+}
+
+.card-header{
+    background-color: #17A2B9 !important;
+    color: #FFFFFF;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}

@@ -1,6 +1,6 @@
 # Indicadores Económicos
 
-Este proyecto muestra los indicadores económicos de algunas monedas.
+Este proyecto muestra alguno de los indicadores económicos.
 
 ### Notas:
 
