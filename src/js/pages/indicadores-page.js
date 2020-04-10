@@ -1,8 +1,11 @@
 import { obtenerIndicadores } from '../providers/indicadores-provider';
-import moment from 'moment';
 
 const body = document.body;
 let divIndicadores;
+
+if (window.moment) { 
+    moment.locale('es');
+}
 
 const crearHtml = () => {
 
@@ -30,10 +33,10 @@ const crearHtml = () => {
 const crearHtmlIndicador = () => {
 
     obtenerIndicadores().then( (resp)=>{
-        moment.locale('es');
         let html = '';
-        let unidadMedida, icono;
+        let unidadMedida, icono, fechaFinal;
         for (let [key, value] of Object.entries(resp)) {
+
             switch (value.unidad_medida){
                 case 'Pesos': unidadMedida = '(CLP)', icono = '$'
                     break;
@@ -43,12 +46,15 @@ const crearHtmlIndicador = () => {
                 break;
             }
             if(value.nombre){
+
+                fechaFinal = value.fecha.split('T')[0].split('-').reverse().join('-');  
+
                 html += `
                 <div class="card bg-light mb-3" style="max-width: 18rem;">
                     <div class="card-header">${value.nombre}</div>
                     <div class="card-body">
                     <p class="card-text"><b>Valor: </b>${icono}${value.valor} ${unidadMedida}</p>
-                    <p class="card-text"><b>Fecha: </b>${ moment(value.fecha).format('L')}</p>
+                    <p class="card-text"><b>Fecha: </b>${ fechaFinal }</p>
                     </div>
                 </div>
                 `;

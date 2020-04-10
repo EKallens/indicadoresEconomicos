@@ -30,9 +30,5 @@
     "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.13.0",
-    "bootstrap-select": "^1.13.12",
-    "material-design-icons": "^3.0.1",
-    "moment": "^2.24.0"
   }
 }
