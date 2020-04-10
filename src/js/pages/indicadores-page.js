@@ -12,11 +12,6 @@ const crearHtml = () => {
             <h2>Indicadores económicos</h2>
             <hr>
             <p>Lista de indicadores diarios</p>
-            <select class="selectpicker">
-                <option>Mustard</option>
-                <option>Ketchup</option>
-                <option>Barbecue</option>
-            </select>
             <div id="divIndicadores">
             </div>
         </div>
